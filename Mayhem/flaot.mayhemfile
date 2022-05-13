@@ -1,0 +1,15 @@
+# Namespaced project name that the target belongs to
+project: dynarmic
+
+# Target name (should be unique within the project)
+target: float-fuzzer
+
+# Base image to run the binary in.
+# image: ghcr.io/saigp/dynarmicfuzz:latest
+
+# List of commands used to test the target
+cmds:
+
+    # Command used to start the target, "@@" is the input file
+    # (when "@@" is omitted Mayhem defaults to stdin inputs)
+    - cmd: /float-fuzzer
