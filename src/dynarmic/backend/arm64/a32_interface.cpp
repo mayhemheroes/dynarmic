@@ -193,6 +193,8 @@ struct Jit::Impl final {
 
 private:
     void PerformRequestedCacheInvalidation() {
+        ClearHalt(HaltReason::CacheInvalidation);
+
         if (invalidate_entire_cache) {
             current_address_space.ClearCache();
 
